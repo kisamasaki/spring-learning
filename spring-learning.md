@@ -69,3 +69,8 @@
     - メソッドに@Transactionalを付けると自動的にトランザクション制御が行われる
     - クラスに付けた場合はクラスが持っている全てのメソッドでトランザクション制御が行われる
 - Spring Bootは「@Configuration」「@EnableAutoConfiguration」「@ComponentScan」の3つのアノテーションを含んだ@SpringBootApplicationを提供している
+- REST APIを作成する場合、ハンドラメソッドに@ResponseBodyを付けるケースが多いが、@RestControllerを付けることで、@Controllerと@ResponseBodyを含んだ処理で動く。
+- @RequestBodyを付けることで、オブジェクトに変換し、ハンドラメソッドの引数に渡すことが出来る。
+- Spring Securityは認証と認可を主としたセキュリティ周りの機能
+    - 認可と認証の処理は分離されているので、認証の仕組みを変えたとしても認可の部分の設定に影響はない
+    - デフォルトでCSRFトークンを自動的に生成し、セッションスコープで保持する
